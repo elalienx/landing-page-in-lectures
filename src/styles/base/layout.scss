@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+body {
+  margin: 0;
+}
+
+.App {
+  background-color: white;
+  font-family: $font;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

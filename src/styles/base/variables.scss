@@ -1,0 +1,23 @@
+// Colors
+$color-primary: #522b45;
+$color-secondary: #d1a19d;
+$color-tertiary: #5c4b5d;
+
+// Fonts
+$font: "Gotham", Arial, Helvetica, sans-serif;
+// Media queries
+
+// Spacing
+
+// Note about Media queries
+// SCSS/SASS this woorks
+// $color-red: #ff0000;
+// @media (min-width: $color-red) {
+// }
+
+// CSS and does not work
+// :root {
+//   --color-blue: #00ccff;
+// }
+// @media (min-width: var(--color-blue)) {
+// }

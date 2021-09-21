@@ -3,6 +3,26 @@
 We use TypeScript and SASS (node-sass instead of Dart SASS) and the install commands are:
 `npx create-react-app project_name --template typescript` and `npm install node-sass --save`
 
+# Fix Firebase links
+
+You put the `rewrites` key arrau inside the file called `firebase.json`
+
+```
+{
+  "hosting": {
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
