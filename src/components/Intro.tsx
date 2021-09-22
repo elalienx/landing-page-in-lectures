@@ -1,16 +1,18 @@
+// NPM Package
 import { FC } from "react";
 
-interface MyProps {
+// Interface
+interface Props {
   url: string;
   totalUsers: number;
 }
 
-const Intro: FC<MyProps> = ({ url, totalUsers }) => {
+const Intro: FC<Props> = ({ url, totalUsers }) => {
   return (
     <div className="intro">
       <h2>Intro</h2>
       <h3>Total users: @{totalUsers}@</h3>
-      <a href={url} target="_blank" rel="noreferer">
+      <a href={url} target="_blank" rel="noreferrer">
         Click me to open an external link
       </a>
     </div>

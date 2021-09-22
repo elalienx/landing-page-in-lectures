@@ -23,6 +23,10 @@ You put the `rewrites` key arrau inside the file called `firebase.json`
 
 ```
 
+## Study on your own
+
+Research `enumerators`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
