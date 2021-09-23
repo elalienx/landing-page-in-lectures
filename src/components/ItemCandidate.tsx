@@ -19,10 +19,10 @@ const ItemCandidate: FC<Props> = ({ item }) => {
 
   return (
     <li className="item-candidate">
-      <a href={`/profile/${url}`}>
+      <Link to={`/profile/${url}`}>
         <img src={imageFile} alt="Thumbnail of the candidate" />
         {name}
-      </a>
+      </Link>
     </li>
   );
 };

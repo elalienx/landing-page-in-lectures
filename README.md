@@ -31,18 +31,12 @@ Research `enumerators` for TypeScript
 
 In `tsconfig.json` write `"baseURL": "src"`
 
-# Getting Started with Create React App
+## Browser route gotchas!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Similar but not the same inside `package.json`
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- `react`: The Facebook library to build UI, this import focus on the hooks and high level logic.
+- `react-dom`: Part of React that focus on the virtual DOM for enhancing perfomance, JSX transformations, etc.
+- `react-router`: External library to handle "virtual" URLS.
+- `react-router-dom`: The part of `react-router` with code specically for the web.
+- `react-router-native`: The part of `react-router` with code specically for mobile apps (App Store and Google Play)

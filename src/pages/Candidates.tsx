@@ -4,24 +4,28 @@ import { FC } from "react";
 // Project files
 import data from "data/candidates.json";
 import iCandidate from "types/iCandidate";
-import ItemCandidate from "components/ItemCandidate";
+import Item from "components/ItemCandidate";
 
-const Candidates: FC = () => {
+// Interface
+interface iProps {
+  totalUsers: number;
+}
+
+const Candidates: FC<iProps> = ({ totalUsers }) => {
   // Properties
-  const randomCandidates = getRandomCandidates(data, 3);
+  const candidates = getRandomCandidates(data, totalUsers);
 
-  // We try to make it pure
   function getRandomCandidates(array: iCandidate[], ammount: number) {
     const clonedArray = [...array];
-    const randomCandidates = clonedArray.sort(() => 0.5 - Math.random());
-    const selectedCandidates = randomCandidates.slice(0, ammount);
+    const shuffledArray = clonedArray.sort(() => 0.5 - Math.random());
+    const selectedCandidates = shuffledArray.slice(0, ammount);
 
     return selectedCandidates;
   }
 
   // Component
-  const CandidateItems = randomCandidates.map((item, index) => (
-    <ItemCandidate key={index} item={item} />
+  const Items = candidates.map((item, index) => (
+    <Item key={index} item={item} />
   ));
 
   return (
@@ -34,7 +38,7 @@ const Candidates: FC = () => {
         magni.
       </p>
 
-      <ul>{CandidateItems}</ul>
+      <ul>{Items}</ul>
     </section>
   );
 };

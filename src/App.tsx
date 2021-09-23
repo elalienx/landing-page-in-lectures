@@ -1,19 +1,32 @@
+// NPM packages
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 // Project files
-import Intro from "./components/Intro";
-import Candidates from "./components/Candidates";
+import Candidates from "./pages/Candidates";
+import Home from "pages/Home";
+import Profile from "pages/Profile";
 import "./styles/style.scss";
+import { useEffect } from "react";
 
 export default function App() {
   // Properties
-  const URL: string = "http://www.google.com";
   const TOTAL_USERS = 3;
 
   return (
     <div className="App">
-      <h1>Hello world</h1>
-
-      <Intro url={URL} totalUsers={TOTAL_USERS} />
-      <Candidates />
+      <BrowserRouter>
+        <Switch>
+          <Route path={"/"} exact>
+            <Home totalUsers={TOTAL_USERS} />
+          </Route>
+          <Route path={"/candidates"}>
+            <Candidates totalUsers={TOTAL_USERS} />
+          </Route>
+          <Route path={"/profile/:url"}>
+            <Profile />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
