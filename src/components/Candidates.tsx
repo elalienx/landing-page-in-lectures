@@ -2,9 +2,9 @@
 import { FC } from "react";
 
 // Project files
-import data from "../data/candidates.json";
-import iCandidate from "../types/iCandidate";
-import ItemCandidate from "./ItemCandidate";
+import data from "data/candidates.json";
+import iCandidate from "types/iCandidate";
+import ItemCandidate from "components/ItemCandidate";
 
 const Candidates: FC = () => {
   // Properties

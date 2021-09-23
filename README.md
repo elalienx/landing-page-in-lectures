@@ -25,7 +25,11 @@ You put the `rewrites` key arrau inside the file called `firebase.json`
 
 ## Study on your own
 
-Research `enumerators`
+Research `enumerators` for TypeScript
+
+## Import files using the src folder as the entry point instead of the file itself
+
+In `tsconfig.json` write `"baseURL": "src"`
 
 # Getting Started with Create React App
 
