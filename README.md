@@ -40,3 +40,23 @@ Similar but not the same inside `package.json`
 - `react-router`: External library to handle "virtual" URLS.
 - `react-router-dom`: The part of `react-router` with code specically for the web.
 - `react-router-native`: The part of `react-router` with code specically for mobile apps (App Store and Google Play)
+
+## SASS Mixings
+
+// Create a "function"
+@mixin dark-background($background)
+$accent: $color-secondary
+$text: white
+
+    background-color: $background
+    color: $text
+
+    a
+        color: $accent
+
+    .button
+        background-color: $accent
+        color: $text
+
+// How to use the "function"
+@include dark-background(purple) // where purple can be a SASS variable, HEX value or a RBG value
